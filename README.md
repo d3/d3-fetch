@@ -38,7 +38,7 @@ d3.csv("/path/to/file.csv").then(function(data) {
 
 ## API Reference
 
-<a name="csv" href="#csv">#</a> d3.<b>csv</b>(<i>url</i>[, <i>row</i>])
+<a name="csv" href="#csv">#</a> d3.<b>csv</b>(<i>url</i>[, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/csv.js "Source")
 
 Fetches the [CSV](https://github.com/d3/d3-dsv#csvParse) file at the specified *url*. An optional *row* conversion function may be specified to map and filter row objects to a more-specific representation; see [*dsv*.parse](https://github.com/d3/d3-dsv#dsv_parse) for details. For example:
 
@@ -53,15 +53,15 @@ function row(d) {
 }
 ```
 
-<a name="json" href="#json">#</a> d3.<b>json</b>(<i>url</i>)
+<a name="json" href="#json">#</a> d3.<b>json</b>(<i>url</i>) [<>](https://github.com/d3/d3-fetch/blob/master/src/json.js "Source")
 
 Fetches the [JSON](http://json.org) file at the specified *url*.
 
-<a name="text" href="#text">#</a> d3.<b>text</b>(<i>url</i>)
+<a name="text" href="#text">#</a> d3.<b>text</b>(<i>url</i>) [<>](https://github.com/d3/d3-fetch/blob/master/src/text.js "Source")
 
 Fetches the text file at the specified *url*.
 
-<a name="tsv" href="#tsv">#</a> d3.<b>tsv</b>(<i>url</i>[, <i>row</i>])
+<a name="tsv" href="#tsv">#</a> d3.<b>tsv</b>(<i>url</i>[, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/tsv.js "Source")
 
 Fetches the [TSV](https://github.com/d3/d3-dsv#tsvParse) file at the specified *url*. An optional *row* conversion function may be specified to map and filter row objects to a more-specific representation; see [*dsv*.parse](https://github.com/d3/d3-dsv#dsv_parse) for details. For example:
 
