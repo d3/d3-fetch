@@ -1,6 +1,6 @@
 {
   "name": "d3-fetch",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Convenient parsing for Fetch.",
   "keywords": [
     "d3",
