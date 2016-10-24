@@ -53,6 +53,10 @@ function row(d) {
 }
 ```
 
+<a name="image" href="#image">#</a> d3.<b>image</b>(<i>url</i>[, <i>anonymous</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/image.js "Source")
+
+Fetches the image at the specified *url*. If *anonymous* is true, the [cross-origin request](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image) is anonymous.
+
 <a name="json" href="#json">#</a> d3.<b>json</b>(<i>url</i>) [<>](https://github.com/d3/d3-fetch/blob/master/src/json.js "Source")
 
 Fetches the [JSON](http://json.org) file at the specified *url*.
