@@ -1,7 +1,7 @@
-import text from "./text";
+function responseJson(response) {
+  return response.json();
+}
 
 export default function(url) {
-  return text(url).then(function(response) {
-    return JSON.parse(response);
-  });
+  return fetch(url).then(responseJson);
 }
