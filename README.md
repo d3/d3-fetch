@@ -38,6 +38,14 @@ d3.csv("/path/to/file.csv").then(function(data) {
 
 ## API Reference
 
+<a name="blob" href="#blob">#</a> d3.<b>blob</b>(<i>url</i>) [<>](https://github.com/d3/d3-fetch/blob/master/src/blob.js "Source")
+
+Fetches the binary file at the specified *url* as a Blob.
+
+<a name="buffer" href="#buffer">#</a> d3.<b>buffer</b>(<i>url</i>) [<>](https://github.com/d3/d3-fetch/blob/master/src/buffer.js "Source")
+
+Fetches the binary file at the specified *url* as an ArrayBuffer.
+
 <a name="csv" href="#csv">#</a> d3.<b>csv</b>(<i>url</i>[, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/csv.js "Source")
 
 Fetches the [CSV](https://github.com/d3/d3-dsv#csvParse) file at the specified *url*. An optional *row* conversion function may be specified to map and filter row objects to a more-specific representation; see [*dsv*.parse](https://github.com/d3/d3-dsv#dsv_parse) for details. For example:
