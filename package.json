@@ -22,19 +22,19 @@
     "url": "https://github.com/d3/d3-fetch.git"
   },
   "scripts": {
-    "pretest": "rm -rf dist && mkdir dist && rollup --banner \"$(preamble)\" -f umd -g d3-dsv:d3 -n d3 -o dist/d3-fetch.js -- index.js",
+    "pretest": "rm -rf dist && mkdir dist && rollup -c --banner \"$(preamble)\"",
     "test": "tape 'test/**/*-test.js'",
-    "prepublish": "npm run test && uglifyjs --preamble \"$(preamble)\" dist/d3-fetch.js -c -m -o dist/d3-fetch.min.js",
-    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cd ../d3.github.com && git pull && cp ../d3-fetch/dist/d3-fetch.js d3-fetch.v0.js && cp ../d3-fetch/dist/d3-fetch.min.js d3-fetch.v0.min.js && git add d3-fetch.v0.js d3-fetch.v0.min.js && git commit -m \"d3-fetch ${VERSION}\" && git push && cd - && zip -j dist/d3-fetch.zip -- LICENSE README.md dist/d3-fetch.js dist/d3-fetch.min.js"
+    "prepublishOnly": "npm run test && uglifyjs -b beautify=false,preamble=\"'$(preamble)'\" dist/d3-fetch.js -c -m -o dist/d3-fetch.min.js",
+    "postpublish": "git push && git push --tags && cd ../d3.github.com && git pull && cp ../d3-fetch/dist/d3-fetch.js d3-fetch.v0.js && cp ../d3-fetch/dist/d3-fetch.min.js d3-fetch.v0.min.js && git add d3-fetch.v0.js d3-fetch.v0.min.js && git commit -m \"d3-fetch ${npm_package_version}\" && git push && cd - && zip -j dist/d3-fetch.zip -- LICENSE README.md dist/d3-fetch.js dist/d3-fetch.min.js"
   },
   "dependencies": {
     "d3-dsv": "1"
   },
   "devDependencies": {
-    "eslint": "3",
-    "package-preamble": "0.0",
-    "rollup": "0.36",
+    "eslint": "4",
+    "package-preamble": "0.1",
+    "rollup": "0.52",
     "tape": "4",
-    "uglify-js": "2"
+    "uglify-js": "3"
   }
 }
