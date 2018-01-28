@@ -2,6 +2,6 @@ function responseJson(response) {
   return response.json();
 }
 
-export default function(url) {
-  return fetch(url).then(responseJson);
+export default function(input, init) {
+  return fetch(input, init).then(responseJson);
 }

@@ -2,6 +2,6 @@ function responseText(response) {
   return response.text();
 }
 
-export default function(url) {
-  return fetch(url).then(responseText);
+export default function(input, init) {
+  return fetch(input, init).then(responseText);
 }

@@ -38,28 +38,38 @@ d3.csv("/path/to/file.csv").then(function(data) {
 
 ## API Reference
 
-<a name="blob" href="#blob">#</a> d3.<b>blob</b>(<i>url</i>) [<>](https://github.com/d3/d3-fetch/blob/master/src/blob.js "Source")
+<a name="blob" href="#blob">#</a> d3.<b>blob</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/blob.js "Source")
 
-Fetches the binary file at the specified *url* as a Blob.
+Fetches the binary file at the specified *input* URL as a Blob. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method).
 
-<a name="buffer" href="#buffer">#</a> d3.<b>buffer</b>(<i>url</i>) [<>](https://github.com/d3/d3-fetch/blob/master/src/buffer.js "Source")
+<a name="buffer" href="#buffer">#</a> d3.<b>buffer</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/buffer.js "Source")
 
-Fetches the binary file at the specified *url* as an ArrayBuffer.
+Fetches the binary file at the specified *input* URL as an ArrayBuffer. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method).
 
-<a name="csv" href="#csv">#</a> d3.<b>csv</b>(<i>url</i>[, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/csv.js "Source")
+<a name="csv" href="#csv">#</a> d3.<b>csv</b>(<i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
-Fetches the [CSV](https://github.com/d3/d3-dsv#csvParse) file at the specified *url*. An optional *row* conversion function may be specified to map and filter row objects to a more-specific representation; see [*dsv*.parse](https://github.com/d3/d3-dsv#dsv_parse) for details. For example:
+Equivalent to [dsv](#dsv) with the tab character as the delimiter.
+
+<a name="dsv" href="#dsv">#</a> d3.<b>dsv</b>(<i>delimiter</i>, <i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
+
+Fetches the [DSV](https://github.com/d3/d3-dsv) file at the specified *input* URL. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method). An optional *row* conversion function may be specified to map and filter row objects to a more-specific representation; see [*dsv*.parse](https://github.com/d3/d3-dsv#dsv_parse) for details. For example:
 
 ```js
-function row(d) {
+d3.dsv(",", "test.csv", function(d) {
   return {
     year: new Date(+d.Year, 0, 1), // convert "Year" column to Date
     make: d.Make,
     model: d.Model,
     length: +d.Length // convert "Length" column to number
   };
-}
+}).then(function(data) {
+  console.log(data);
+});
 ```
+
+If only one of *init* and *row* is specified, it is interpreted as the *row* conversion function if it is a function, and otherwise an *init* object.
+
+See also [csv](#csv) and [tsv](#tsv).
 
 <a name="image" href="#image">#</a> d3.<b>image</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/image.js "Source")
 
@@ -71,25 +81,14 @@ d3.image("https://example.com/test.png", {crossOrigin: "anonymous"}).then(functi
 });
 ```
 
-<a name="json" href="#json">#</a> d3.<b>json</b>(<i>url</i>) [<>](https://github.com/d3/d3-fetch/blob/master/src/json.js "Source")
+<a name="json" href="#json">#</a> d3.<b>json</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/json.js "Source")
 
-Fetches the [JSON](http://json.org) file at the specified *url*.
+Fetches the [JSON](http://json.org) file at the specified *input* URL.
 
-<a name="text" href="#text">#</a> d3.<b>text</b>(<i>url</i>) [<>](https://github.com/d3/d3-fetch/blob/master/src/text.js "Source")
+<a name="text" href="#text">#</a> d3.<b>text</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/text.js "Source")
 
-Fetches the text file at the specified *url*.
+Fetches the text file at the specified *input* URL.
 
-<a name="tsv" href="#tsv">#</a> d3.<b>tsv</b>(<i>url</i>[, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/tsv.js "Source")
+<a name="tsv" href="#tsv">#</a> d3.<b>tsv</b>(<i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
-Fetches the [TSV](https://github.com/d3/d3-dsv#tsvParse) file at the specified *url*. An optional *row* conversion function may be specified to map and filter row objects to a more-specific representation; see [*dsv*.parse](https://github.com/d3/d3-dsv#dsv_parse) for details. For example:
-
-```js
-function row(d) {
-  return {
-    year: new Date(+d.Year, 0, 1), // convert "Year" column to Date
-    make: d.Make,
-    model: d.Model,
-    length: +d.Length // convert "Length" column to number
-  };
-}
-```
+Equivalent to [dsv](#dsv) with the tab character as the delimiter.
