@@ -1,9 +1,9 @@
-export default function(url, anonymous) {
+export default function(input, init) {
   return new Promise(function(resolve, reject) {
     var image = new Image;
-    if (anonymous) image.crossOrigin = "anonymous";
+    for (var key in init) image[key] = init[key];
     image.onerror = reject;
     image.onload = function() { resolve(image); };
-    image.src = url;
+    image.src = input;
   });
 }

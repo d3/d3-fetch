@@ -61,9 +61,15 @@ function row(d) {
 }
 ```
 
-<a name="image" href="#image">#</a> d3.<b>image</b>(<i>url</i>[, <i>anonymous</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/image.js "Source")
+<a name="image" href="#image">#</a> d3.<b>image</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/image.js "Source")
 
-Fetches the image at the specified *url*. If *anonymous* is true, the [cross-origin request](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image) is anonymous.
+Fetches the image at the specified *input* URL. If *init* is specified, sets any additional properties on the image before loading. For example, to enable an anonymous [cross-origin request](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image):
+
+```js
+d3.image("https://example.com/test.png", {crossOrigin: "anonymous"}).then(function(img) {
+  console.log(img);
+});
+```
 
 <a name="json" href="#json">#</a> d3.<b>json</b>(<i>url</i>) [<>](https://github.com/d3/d3-fetch/blob/master/src/json.js "Source")
 
