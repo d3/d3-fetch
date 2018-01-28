@@ -16,15 +16,15 @@ d3.csv("/path/to/file.csv").then(function(data) {
 });
 ```
 
-This module has built-in support for parsing [JSON](#json), [CSV](#csv), and [TSV](#tsv). You can parse additional formats by using [text](#text) directly. This module is intended to replace [d3-request](https://github.com/d3/d3-request).
+This module has built-in support for parsing [JSON](#json), [CSV](#csv), and [TSV](#tsv). You can parse additional formats by using [text](#text) directly. (This module replaced [d3-request](https://github.com/d3/d3-request).)
 
 ## Installing
 
-If you use NPM, `npm install d3-fetch`. Otherwise, download the [latest release](https://github.com/d3/d3-fetch/releases/latest). You can also load directly from [d3js.org](https://d3js.org) as a [standalone library](https://d3js.org/d3-fetch.v0.min.js). AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3` global is exported:
+If you use NPM, `npm install d3-fetch`. Otherwise, download the [latest release](https://github.com/d3/d3-fetch/releases/latest). You can also load directly from [d3js.org](https://d3js.org) as a [standalone library](https://d3js.org/d3-fetch.v1.min.js). AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3` global is exported:
 
 ```html
 <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
-<script src="https://d3js.org/d3-fetch.v0.min.js"></script>
+<script src="https://d3js.org/d3-fetch.v1.min.js"></script>
 <script>
 
 d3.csv("/path/to/file.csv").then(function(data) {
@@ -33,8 +33,6 @@ d3.csv("/path/to/file.csv").then(function(data) {
 
 </script>
 ```
-
-[Try d3-fetch in your browser.](https://runkit.com/npm/d3-fetch)
 
 ## API Reference
 
@@ -48,7 +46,7 @@ Fetches the binary file at the specified *input* URL as an ArrayBuffer. If *init
 
 <a name="csv" href="#csv">#</a> d3.<b>csv</b>(<i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
-Equivalent to [dsv](#dsv) with the tab character as the delimiter.
+Equivalent to [d3.dsv](#dsv) with the tab character as the delimiter.
 
 <a name="dsv" href="#dsv">#</a> d3.<b>dsv</b>(<i>delimiter</i>, <i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
@@ -69,7 +67,7 @@ d3.dsv(",", "test.csv", function(d) {
 
 If only one of *init* and *row* is specified, it is interpreted as the *row* conversion function if it is a function, and otherwise an *init* object.
 
-See also [csv](#csv) and [tsv](#tsv).
+See also [d3.csv](#csv) and [d3.tsv](#tsv).
 
 <a name="image" href="#image">#</a> d3.<b>image</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/image.js "Source")
 
@@ -91,4 +89,4 @@ Fetches the text file at the specified *input* URL.
 
 <a name="tsv" href="#tsv">#</a> d3.<b>tsv</b>(<i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
-Equivalent to [dsv](#dsv) with the tab character as the delimiter.
+Equivalent to [d3.dsv](#dsv) with the tab character as the delimiter.

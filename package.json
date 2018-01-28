@@ -25,7 +25,7 @@
     "pretest": "rm -rf dist && mkdir dist && rollup -c --banner \"$(preamble)\"",
     "test": "tape 'test/**/*-test.js'",
     "prepublishOnly": "npm run test && uglifyjs -b beautify=false,preamble=\"'$(preamble)'\" dist/d3-fetch.js -c -m -o dist/d3-fetch.min.js",
-    "postpublish": "git push && git push --tags && cd ../d3.github.com && git pull && cp ../d3-fetch/dist/d3-fetch.js d3-fetch.v0.js && cp ../d3-fetch/dist/d3-fetch.min.js d3-fetch.v0.min.js && git add d3-fetch.v0.js d3-fetch.v0.min.js && git commit -m \"d3-fetch ${npm_package_version}\" && git push && cd - && zip -j dist/d3-fetch.zip -- LICENSE README.md dist/d3-fetch.js dist/d3-fetch.min.js"
+    "postpublish": "git push && git push --tags && cd ../d3.github.com && git pull && cp ../d3-fetch/dist/d3-fetch.js d3-fetch.v1.js && cp ../d3-fetch/dist/d3-fetch.min.js d3-fetch.v1.min.js && git add d3-fetch.v1.js d3-fetch.v1.min.js && git commit -m \"d3-fetch ${npm_package_version}\" && git push && cd - && zip -j dist/d3-fetch.zip -- LICENSE README.md dist/d3-fetch.js dist/d3-fetch.min.js"
   },
   "dependencies": {
     "d3-dsv": "1"
@@ -35,6 +35,6 @@
     "package-preamble": "0.1",
     "rollup": "0.52",
     "tape": "4",
-    "uglify-js": "3"
+    "uglify-js": "3.2"
   }
 }
