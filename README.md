@@ -38,11 +38,11 @@ d3.csv("/path/to/file.csv").then(function(data) {
 
 <a name="blob" href="#blob">#</a> d3.<b>blob</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/blob.js "Source")
 
-Fetches the binary file at the specified *input* URL as a Blob. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method).
+Fetches the binary file at the specified *input* URL as a Blob. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method); see [RequestInit](https://fetch.spec.whatwg.org/#requestinit) for allowed fields.
 
 <a name="buffer" href="#buffer">#</a> d3.<b>buffer</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/buffer.js "Source")
 
-Fetches the binary file at the specified *input* URL as an ArrayBuffer. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method).
+Fetches the binary file at the specified *input* URL as an ArrayBuffer. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method); see [RequestInit](https://fetch.spec.whatwg.org/#requestinit) for allowed fields.
 
 <a name="csv" href="#csv">#</a> d3.<b>csv</b>(<i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
@@ -50,7 +50,7 @@ Equivalent to [d3.dsv](#dsv) with the tab character as the delimiter.
 
 <a name="dsv" href="#dsv">#</a> d3.<b>dsv</b>(<i>delimiter</i>, <i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
-Fetches the [DSV](https://github.com/d3/d3-dsv) file at the specified *input* URL. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method). An optional *row* conversion function may be specified to map and filter row objects to a more-specific representation; see [*dsv*.parse](https://github.com/d3/d3-dsv#dsv_parse) for details. For example:
+Fetches the [DSV](https://github.com/d3/d3-dsv) file at the specified *input* URL. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method); see [RequestInit](https://fetch.spec.whatwg.org/#requestinit) for allowed fields. An optional *row* conversion function may be specified to map and filter row objects to a more-specific representation; see [*dsv*.parse](https://github.com/d3/d3-dsv#dsv_parse) for details. For example:
 
 ```js
 d3.dsv(",", "test.csv", function(d) {
@@ -81,11 +81,11 @@ d3.image("https://example.com/test.png", {crossOrigin: "anonymous"}).then(functi
 
 <a name="json" href="#json">#</a> d3.<b>json</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/json.js "Source")
 
-Fetches the [JSON](http://json.org) file at the specified *input* URL.
+Fetches the [JSON](http://json.org) file at the specified *input* URL. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method); see [RequestInit](https://fetch.spec.whatwg.org/#requestinit) for allowed fields.
 
 <a name="text" href="#text">#</a> d3.<b>text</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/text.js "Source")
 
-Fetches the text file at the specified *input* URL.
+Fetches the text file at the specified *input* URL. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method); see [RequestInit](https://fetch.spec.whatwg.org/#requestinit) for allowed fields.
 
 <a name="tsv" href="#tsv">#</a> d3.<b>tsv</b>(<i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
