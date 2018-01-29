@@ -25,7 +25,7 @@ export default function(input, init, row) {
   let fetchParser = fetchParsers[fileExtension];
   if (!fetchParser) {
     throw new Error('d3.fetch requires one of the following file extensions to be used: ' +
-      [ Object.keys(fetchParsers), ...imageExtensions ].join(', '));
+      [ ...Object.keys(fetchParsers), ...imageExtensions ].join(', '));
   }
 
   return fetchParser(input, init, row);
