@@ -46,7 +46,7 @@ Fetches the binary file at the specified *input* URL as an ArrayBuffer. If *init
 
 <a name="csv" href="#csv">#</a> d3.<b>csv</b>(<i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
-Equivalent to [d3.dsv](#dsv) with the tab character as the delimiter.
+Equivalent to [d3.dsv](#dsv) with the comma character as the delimiter.
 
 <a name="dsv" href="#dsv">#</a> d3.<b>dsv</b>(<i>delimiter</i>, <i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
