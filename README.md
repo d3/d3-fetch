@@ -69,6 +69,10 @@ If only one of *init* and *row* is specified, it is interpreted as the *row* con
 
 See also [d3.csv](#csv) and [d3.tsv](#tsv).
 
+<a name="html" href="#html">#</a> d3.<b>html</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/xml.js "Source")
+
+Fetches the file at the specified *input* URL as [text](#text) and then [parses it](https://developer.mozilla.org/docs/Web/API/DOMParser) as HTML. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method); see [RequestInit](https://fetch.spec.whatwg.org/#requestinit) for allowed fields.
+
 <a name="image" href="#image">#</a> d3.<b>image</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/image.js "Source")
 
 Fetches the image at the specified *input* URL. If *init* is specified, sets any additional properties on the image before loading. For example, to enable an anonymous [cross-origin request](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image):
@@ -83,6 +87,10 @@ d3.image("https://example.com/test.png", {crossOrigin: "anonymous"}).then(functi
 
 Fetches the [JSON](http://json.org) file at the specified *input* URL. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method); see [RequestInit](https://fetch.spec.whatwg.org/#requestinit) for allowed fields.
 
+<a name="svg" href="#svg">#</a> d3.<b>svg</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/xml.js "Source")
+
+Fetches the file at the specified *input* URL as [text](#text) and then [parses it](https://developer.mozilla.org/docs/Web/API/DOMParser) as SVG. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method); see [RequestInit](https://fetch.spec.whatwg.org/#requestinit) for allowed fields.
+
 <a name="text" href="#text">#</a> d3.<b>text</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/text.js "Source")
 
 Fetches the text file at the specified *input* URL. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method); see [RequestInit](https://fetch.spec.whatwg.org/#requestinit) for allowed fields.
@@ -90,3 +98,7 @@ Fetches the text file at the specified *input* URL. If *init* is specified, it i
 <a name="tsv" href="#tsv">#</a> d3.<b>tsv</b>(<i>input</i>[, <i>init</i>][, <i>row</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/dsv.js "Source")
 
 Equivalent to [d3.dsv](#dsv) with the tab character as the delimiter.
+
+<a name="xml" href="#xml">#</a> d3.<b>xml</b>(<i>input</i>[, <i>init</i>]) [<>](https://github.com/d3/d3-fetch/blob/master/src/xml.js "Source")
+
+Fetches the file at the specified *input* URL as [text](#text) and then [parses it](https://developer.mozilla.org/docs/Web/API/DOMParser) as XML. If *init* is specified, it is passed along to the underlying call to [fetch](https://fetch.spec.whatwg.org/#fetch-method); see [RequestInit](https://fetch.spec.whatwg.org/#requestinit) for allowed fields.
