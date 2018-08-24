@@ -191,8 +191,8 @@ cross-spawn@^6.0.5:
     which "^1.2.9"
 
 d3-dsv@1:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/d3-dsv/-/d3-dsv-1.0.9.tgz#9cd3165ada9dbe4434d7238c1ddf1c78b99a8e0c"
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/d3-dsv/-/d3-dsv-1.0.10.tgz#4371c489a2a654a297aca16fcaf605a6f31a6f51"
   dependencies:
     commander "2"
     iconv-lite "0.4"
