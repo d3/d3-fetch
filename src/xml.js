@@ -1,4 +1,4 @@
-import text from "./text";
+import text from "./text.js";
 
 function parser(type) {
   return function(input, init)  {

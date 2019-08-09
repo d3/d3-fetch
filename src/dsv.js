@@ -1,5 +1,5 @@
 import {csvParse, dsvFormat, tsvParse} from "d3-dsv";
-import text from "./text";
+import text from "./text.js";
 
 function dsvParse(parse) {
   return function(input, init, row) {
