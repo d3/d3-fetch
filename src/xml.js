@@ -1,11 +1,8 @@
 import text from "./text.js";
 
 function parser(type) {
-  return function(input, init)  {
-    return text(input, init).then(function(text) {
-      return (new DOMParser).parseFromString(text, type);
-    });
-  };
+  return (input, init) => text(input, init)
+    .then(text => (new DOMParser).parseFromString(text, type));
 }
 
 export default parser("application/xml");
