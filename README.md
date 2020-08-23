@@ -23,8 +23,8 @@ This module has built-in support for parsing [JSON](#json), [CSV](#csv), and [TS
 If you use NPM, `npm install d3-fetch`. Otherwise, download the [latest release](https://github.com/d3/d3-fetch/releases/latest). You can also load directly from [d3js.org](https://d3js.org) as a [standalone library](https://d3js.org/d3-fetch.v1.min.js). AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3` global is exported:
 
 ```html
-<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
-<script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+<script src="https://d3js.org/d3-dsv.v2.min.js"></script>
+<script src="https://d3js.org/d3-fetch.v2.min.js"></script>
 <script>
 
 d3.csv("/path/to/file.csv").then(function(data) {
