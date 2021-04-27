@@ -20,11 +20,21 @@ This module has built-in support for parsing [JSON](#json), [CSV](#csv), and [TS
 
 ## Installing
 
-If you use NPM, `npm install d3-fetch`. Otherwise, download the [latest release](https://github.com/d3/d3-fetch/releases/latest). You can also load directly from [d3js.org](https://d3js.org) as a [standalone library](https://d3js.org/d3-fetch.v1.min.js). AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3` global is exported:
+If you use npm, `npm install d3-fetch`. You can also download the [latest release on GitHub](https://github.com/d3/d3-fetch/releases/latest). For vanilla HTML in modern browsers, import d3-fetch from Skypack:
 
 ```html
-<script src="https://d3js.org/d3-dsv.v2.min.js"></script>
-<script src="https://d3js.org/d3-fetch.v2.min.js"></script>
+<script type="module">
+import {csv} from "https://cdn.skypack.dev/d3-fetch@3";
+
+csv("/path/to/file.csv").then(data => console.log(data)); // [{"Hello": "world"}, …]
+
+</script>
+```
+
+For legacy environments, you can load d3-fetch’s UMD bundle from an npm-based CDN such as jsDelivr; a `d3` global is exported:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/d3-fetch@3"></script>
 <script>
 
 d3.csv("/path/to/file.csv").then(function(data) {
