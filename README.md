@@ -7,6 +7,5 @@ This module provides convenient parsing on top of [Fetch](https://fetch.spec.wha
 ## Resources
 
 - [Documentation](https://d3js.org/d3-fetch)
-- [Examples](https://observablehq.com/collection/@d3/d3-fetch)
 - [Releases](https://github.com/d3/d3-fetch/releases)
 - [Getting help](https://d3js.org/community)
