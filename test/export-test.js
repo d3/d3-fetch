@@ -1,6 +1,6 @@
 import assert from "node:assert";
 import {it} from "vitest";
-import * as d3 from "../src/index.js";
+import * as d3 from "d3-fetch";
 
 it("fetch methods", () => {
   assert.strictEqual(typeof d3.blob, "function");
