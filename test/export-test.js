@@ -1,8 +1,8 @@
-import {test} from "vitest";
+import {it} from "vitest";
 import assert from "assert";
 import * as d3 from "../src/index.js";
 
-test("fetch methods", () => {
+it("fetch methods", () => {
   assert.strictEqual(typeof d3.blob, "function");
   assert.strictEqual(typeof d3.buffer, "function");
   assert.strictEqual(typeof d3.csv, "function");
